@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "php-sage/sage": "^1.7"
+    },
+    "require": {
+        "dompdf/dompdf": "^3.0"
+    }
+}

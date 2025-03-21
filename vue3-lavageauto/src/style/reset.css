@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Holy';
+    src: url('../font/holy_friday-webfont.woff') format('woff2'),
+         url('../font/holy_friday-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Holy';
+    background-color: #fbf7e8;
+    min-height: 100vh;
+}
+

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eslint": "^9.18.0",
+    "eslint-webpack-plugin": "^4.2.0"
+  }
+}

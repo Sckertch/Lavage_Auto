@@ -1,0 +1,4 @@
+CREATE TABLE devis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pdf BLOB
+);
