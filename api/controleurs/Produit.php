@@ -8,7 +8,7 @@ class Produit{
     // Fonction pour récupérer tous les lycées avec la class conn
     public function getProduit()
     {
-        $a = $this->c->get("Connection")->jsonRequest("SELECT * FROM Produit",true);
+        $a = $this->c->get("Connection")->jsonRequest("SELECT * FROM produit",true);
         //ss($a);
         $this->c->get('App')->apiResult->send($a,true);
     }

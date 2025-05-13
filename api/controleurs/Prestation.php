@@ -9,7 +9,7 @@ class Prestation{
     // Fonction pour récupérer toutes les prestations avec la class conn
     public function getPrestation()
     {
-        $a = $this->c->get("Connection")->jsonRequest("SELECT * FROM Prestation", true);
+        $a = $this->c->get("Connection")->jsonRequest("SELECT * FROM prestation", true);
         $this->c->get('App')->apiResult->send($a, true);
     }
 }

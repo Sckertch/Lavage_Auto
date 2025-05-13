@@ -1,15 +1,16 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
+
+// Chargement des variables d'environnement depuis le fichier .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
+
 class Connection
 {   		
-    private static $serveur='localhost';
-    // private static $serveur='mysql-sckertch.alwaysdata.net';
-    private static $bdd='lavage';   		
-    // private static $bdd='sckertch_lavageauto';   		
-    private static $user='root' ;    		
-    // private static $user='sckertch' ;    		
-    private static $mdp='';
-    // private static $mdp='Lavageauto';
+    private static $serveur;
+    private static $bdd;   		
+    private static $user;    		
+    private static $mdp;
 	private $conn;
 /**
  * Constructeur privé, crée l'instance de PDO qui sera sollicitée
@@ -17,6 +18,13 @@ class Connection
  */				
 	public function __construct(ContainerDI $c){
         $this->c = $c;
+        
+        // Récupération des variables d'environnement
+        self::$serveur = $_ENV['DB_HOST'];
+        self::$bdd = $_ENV['DB_NAME'];
+        self::$user = $_ENV['DB_USER'];
+        self::$mdp = $_ENV['DB_PASSWORD'];
+        
 		$dsn = 'mysql:host='.self::$serveur.';dbname='.self::$bdd.';user='.self::$user.';password='.self::$mdp;
 		try{
             $monPDO = new PDO($dsn);
