@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../controleurs/send.php';
+require_once __DIR__ . '/../api/controleurs/send.php';
 
 date_default_timezone_set('America/Guadeloupe'); //Définir le fuseau horaire
 $date = date('d/m/Y'); //Définition de la date au format jj/mm/yyyy

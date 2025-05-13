@@ -15,16 +15,14 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "NavBar",
-    methods: {
-        sendValue(value) {
-            // Émet un événement avec la valeur du bouton cliqué
-            this.$emit('changement', value);
-        }
-    }
-}
+<script setup>
+// Définir les émissions d'événements
+const emit = defineEmits(['changement']);
+
+// Fonction pour émettre un événement avec la valeur du bouton cliqué
+const sendValue = (value) => {
+    emit('changement', value);
+};
 </script>
 
 <style lang="scss">

@@ -22,7 +22,7 @@ class Send{
         // Préparer les données pour le PDF
         ob_start();
         // Passer le tableau des détails au fichier vDevis.php
-        require_once __DIR__ . '/../vue3-lavageauto/Devis.php';
+        require_once __DIR__ . '/../../vue3-lavageauto/Devis.php';
         $html = ob_get_contents();
         ob_end_clean();
         // die($html);

@@ -3,7 +3,6 @@ require __DIR__ . '/ContainerDI.php';
 require __DIR__ . '/../vendor/autoload.php';
 
 $c = new ContainerDI();
-$moteur = new Moteur($c);
 
 // Récupérer le tableau des détails envoyés depuis le formulaire
 $detailsJson = $_POST['details']; // 'details' est une chaîne JSON

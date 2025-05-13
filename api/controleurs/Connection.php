@@ -16,6 +16,7 @@ class Connection
  * pour toutes les méthodes de la classe
  */				
 	public function __construct(ContainerDI $c){
+        $this->c = $c;
 		$dsn = 'mysql:host='.self::$serveur.';dbname='.self::$bdd.';user='.self::$user.';password='.self::$mdp;
 		try{
             $monPDO = new PDO($dsn);
@@ -26,7 +27,7 @@ class Connection
 
         } catch (PDOException $e){
             $msg = 'ERREUR PDO DANS '. $e->getFile() . 'L.' . $e->getLine() . ' : ' . $e->getMessage();
-            die($msg); 
+            ssd($msg); 
         }
 	}
 
@@ -41,19 +42,19 @@ class Connection
         return $stmt->fetchAll();
     }
 
-	public function jsonRequest($sql){
+    public function jsonRequest($sql){
 
-		$result = $this->conn->query($this->requete($sql,true));
+        $result = $this->conn->query($this->requete($sql,true));
         //On créé un tableau pour stocker nos objet de la base de donnée
-		$all = array();
-		foreach ($result as $produits){
-			array_push($all,$produits);
-		}
+        $all = array();
+        foreach ($result as $produits){
+            array_push($all, $produits);
+        }
+        // ssd($all);
         //On renvoi les resultat les resultats en format json pour qu'il puissent etre interprétés par VueJs
-		header('Content-Type: application/json');
-		return json_encode($all, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-	}
+        return $all;
+    }
 }
 
 

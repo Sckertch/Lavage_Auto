@@ -3,6 +3,7 @@
         "php-sage/sage": "^1.7"
     },
     "require": {
-        "dompdf/dompdf": "^3.0"
+        "dompdf/dompdf": "^3.0",
+        "nikic/fast-route": "^1.3"
     }
 }
