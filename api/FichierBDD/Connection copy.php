@@ -1,11 +1,20 @@
 <?php
+/**
+ * FICHIER NON UTILISÉ
+ * Ce fichier est une copie de Connection.php et n'est pas utilisé dans le projet actuel.
+ * Il peut être supprimé ou gardé comme référence.
+ */
 require __DIR__ . '/../vendor/autoload.php';
 class Connection
 {   		
     private static $serveur='localhost';
+    // private static $serveur='mysql-sckertch.alwaysdata.net';
     private static $bdd='lavage';   		
+    // private static $bdd='sckertch_lavageauto';   		
     private static $user='root' ;    		
+    // private static $user='sckertch' ;    		
     private static $mdp='';
+    // private static $mdp='Lavageauto';
 	private $conn;
 /**
  * Constructeur privé, crée l'instance de PDO qui sera sollicitée

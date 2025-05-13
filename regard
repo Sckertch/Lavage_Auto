@@ -1,3 +1,8 @@
+<!-- 
+  FICHIER NON UTILISÉ
+  Ce fichier contient des exemples de code Vue.js et n'est pas utilisé directement dans la production.
+  Il sert probablement de référence ou de sauvegarde de code pour le développement futur.
+-->
 <div class="gpt">
     <template>
     <div class="background">
