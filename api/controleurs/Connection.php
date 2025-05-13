@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-// Chargement des variables d'environnement depuis le fichier .env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+// Chargement des variables d'environnement depuis le fichier .bdd.env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../', '.bdd.env');
 $dotenv->load();
 
 class Connection

@@ -1,6 +1,7 @@
 # Laravel
 /public/storage
 /storage/*.key
+
 .env
 .env.backup
 .env.local
@@ -8,6 +9,11 @@
 .env.testing
 .env.production
 .env.staging
+
+# Fichiers d'environnement contenant des informations sensibles
+.bdd.env
+.bdd.env.backup
+.bdd.env.production
 
 # Miscellaneous
 *.swp
